@@ -33,7 +33,14 @@ html {
 	background: #18181b;
 }
 
+main {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
 main .countries-list-container {
+	flex: 1;
 	overflow-y: auto;
 }
 
@@ -42,11 +49,24 @@ main .countries-list-container > div {
 	display: flex;
 	gap: 0.5rem;
 	border-bottom: 1px solid #e4e4e7;
+	cursor: pointer;
+}
+
+main .countries-list-container > div:hover {
+	background: #fafafa;
 }
 
 main .countries-list-container > div img {
 	height: 2.8rem;
+	width: 5rem;
+	object-position: center;
 	box-shadow: 0 0 0.4rem #e4e4e7;
+	transition: 150ms;
+}
+
+main .countries-list-container > div img:hover {
+	margin-right: 0.5rem;
+	transform: scale(1.2);
 }
 
 main .countries-list-container > div > div {
@@ -58,4 +78,9 @@ main .countries-list-container > div > div {
 
 main .countries-list-container > div h3, main .countries-list-container > div p {
 	font-size: 0.9rem;
+}
+
+main .no-result-container {
+	display: none;
+	padding: 1rem;
 }

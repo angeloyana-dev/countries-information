@@ -11,18 +11,13 @@
 	</head>
 	<body>
 		<section class="search-input-container">
-			<input type="text" placeholder="Search">
-			<button class="fa-solid fa-magnifying-glass"></button>
+			<input type="text" id="search-input" placeholder="Search">
+			<button id="search-button" class="fa-solid fa-magnifying-glass"></button>
 		</section>
 		<main>
-			<section id="countries-list" class="countries-list-container">
-				<div>
-					<img src="https://flagcdn.com/w320/ph.png"></img>
-					<div>
-						<h3>Philippines</h3>
-						<p>Republic of the Philippines</p>
-					</div>
-				</div>
+			<section id="countries-list" class="countries-list-container"></section>
+			<section id="no-result-page" class="no-result-container">
+				No result found.
 			</section>
 		</main>
 	</body>

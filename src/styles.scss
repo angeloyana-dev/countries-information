@@ -1,4 +1,5 @@
 $dark: hsl(240, 5.9%, 10%);
+$zinc-50: hsl(0, 0%, 98%);
 $zinc-100: hsl(240, 4.8%, 95.9%);
 $zinc-200: hsl(240, 5.9%, 90%);
 
@@ -38,7 +39,12 @@ html {
 }
 
 main {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	
 	.countries-list-container {
+		flex: 1;
 		overflow-y: auto;
 		
 		> div {
@@ -46,10 +52,23 @@ main {
 			display: flex;
 			gap: 0.5rem;
 			border-bottom: 1px solid $zinc-200;
+			cursor: pointer;
+			
+			&:hover {
+				background: $zinc-50;
+			}
 			
 			img {
 				height: 2.8rem;
+				width: 5rem;
+				object-position: center;
 				box-shadow: 0 0 0.4rem $zinc-200;
+				transition: 150ms;
+				
+				&:hover {
+					margin-right: 0.5rem;
+					transform: scale(1.2);
+				}
 			}
 			
 			> div {
@@ -63,5 +82,10 @@ main {
 				font-size: 0.9rem;
 			}
 		}
+	}
+	
+	.no-result-container {
+		display: none;
+		padding: 1rem;
 	}
 }
