@@ -1,0 +1,67 @@
+$dark: hsl(240, 5.9%, 10%);
+$zinc-100: hsl(240, 4.8%, 95.9%);
+$zinc-200: hsl(240, 5.9%, 90%);
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	outline: none;
+}
+
+html {
+	font-size: 16px;
+	font-family: Sans-Serif;
+	color: $dark;
+}
+
+.search-input-container {
+	padding: 0.6rem 1rem;
+	display: flex;
+	border-bottom: 1px solid $zinc-200;
+	
+	input {
+		flex: 1;
+		font-size: 1rem;
+		padding: 0.8rem;
+		border: none;
+		background: $zinc-100;
+	}
+	
+	button {
+		width: 2.8rem;
+		font-size: 1rem;
+		border: none;
+		color: #fff;
+		background: $dark;
+	}
+}
+
+main {
+	.countries-list-container {
+		overflow-y: auto;
+		
+		> div {
+			padding: 0.6rem 1rem;
+			display: flex;
+			gap: 0.5rem;
+			border-bottom: 1px solid $zinc-200;
+			
+			img {
+				height: 2.8rem;
+				box-shadow: 0 0 0.4rem $zinc-200;
+			}
+			
+			> div {
+				display: flex;
+				justify-content: center;
+				align-items: flex-start;
+				flex-direction: column;
+			}
+			
+			h3, p {
+				font-size: 0.9rem;
+			}
+		}
+	}
+}
