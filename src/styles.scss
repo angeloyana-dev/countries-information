@@ -1,7 +1,9 @@
 $dark: hsl(240, 5.9%, 10%);
+$white: #fff;
 $zinc-50: hsl(0, 0%, 98%);
 $zinc-100: hsl(240, 4.8%, 95.9%);
 $zinc-200: hsl(240, 5.9%, 90%);
+$green: hsl(160, 84.1%, 39.4%);
 
 * {
 	padding: 0;
@@ -20,6 +22,12 @@ html {
 	padding: 0.6rem 1rem;
 	display: flex;
 	border-bottom: 1px solid $zinc-200;
+	position: fixed;
+	top: 0 ;
+	left: 0;
+	width: 100%;
+	background: $white;
+	z-index: 20;
 	
 	input {
 		flex: 1;
@@ -35,13 +43,17 @@ html {
 		border: none;
 		color: #fff;
 		background: $dark;
+		cursor: pointer;
+		position: relative;
 	}
 }
 
 main {
 	height: 100vh;
+	margin-top: 4rem;
 	display: flex;
 	flex-direction: column;
+	position: relative;
 	
 	.countries-list-container {
 		flex: 1;
@@ -87,5 +99,117 @@ main {
 	.no-result-container {
 		display: none;
 		padding: 1rem;
+	}
+	
+	.country-infos-container {
+		width: 100%;
+		height: 100vh;
+		padding: 2rem 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: $white;
+		display: none;
+		flex-direction: column;
+		align-items: center;
+		overflow: auto;
+		
+		> div {
+			width: 85%;
+			
+			> div:first-child {
+				width: 100%;
+				display: flex;
+				gap: 0.5rem;
+				justify-content: center;
+				
+				img {
+					height: 6rem;
+					box-shadow: 0 0 0.4rem $zinc-200;
+				}
+			}
+			
+			> div:nth-child(2) {
+				padding: 0.7rem 0;
+				
+				h3 {
+					font-family: Serif;
+					font-weight: 500;
+					font-size: 1.6rem;
+					text-align: center;
+					margin-bottom: 0.3rem;
+				}
+				
+				h4 {
+					font-weight: 400;
+					font-size: 1rem;
+					font-style: italic;
+					color: hsl(240, 5.3%, 26.1%);
+					text-align: center;
+				}
+			}
+			
+			> div:last-child {
+				margin-top: 1rem;
+				display: flex;
+				gap: 0.5rem;
+				
+				a {
+					padding: 0.7rem;
+					font-size: 1rem;
+					width: 4rem;
+					background: $green;
+					color: $white;
+					text-decoration: none;
+					display: grid;
+					place-items: center;
+				}
+				
+				button {
+					border: none;
+					padding: 0.7rem;
+					font-size: 1rem;
+					cursor: pointer;
+					
+					&:first-child {
+						width: 4rem;
+						background: $green;
+						color: $white;
+					}
+					
+					&:last-child {
+						flex: 1;
+						background: $dark;
+						color: $white;
+					}
+				}
+			}
+		}
+		
+		table {
+			border-collapse: collapse;
+			width: 100%;
+			
+			tr {
+				border: 1px solid $zinc-200;
+				
+				&:nth-of-type(odd) {
+					background: $zinc-50;
+				}
+				
+				&:hover {
+					background: $zinc-100;
+				}
+				
+				td {
+					padding: 0.5rem 0.6rem;
+					
+					
+					&:first-child {
+						border-right: 1px solid $zinc-200;
+					}
+				}
+			}
+		}
 	}
 }
