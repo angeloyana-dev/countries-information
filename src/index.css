@@ -12,11 +12,42 @@ body {
 #root {
 	width: 100%;
 	height: 100vh;
+	position: relative;
+}
+
+#root section.search-input {
+	width: 100%;
+	padding: 0.7rem 1.5rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	background: #fff;
+	border-bottom: 1px solid #e4e4e7;
+}
+
+#root section.search-input input {
+	flex-grow: 1;
+	padding: 0.9rem 1rem;
+	border: none;
+	background: #f4f4f5;
+	font-size: 1rem;
+	outline: none;
+}
+
+#root section.search-input i {
+	padding: 0 1rem;
+	display: grid;
+	place-items: center;
+	background: #18181b;
+	color: #fff;
+	font-size: 1rem;
 }
 
 #root section.countries-list {
 	width: 100%;
 	height: 100%;
+	padding-top: calc(2.8rem + 1.4rem + 4px);
 }
 
 #root section.countries-list > div {
@@ -44,4 +75,10 @@ body {
 
 #root section.countries-list > div .img-holder:hover > img {
 	transform: scale(1.15);
+}
+
+#root section.no-result {
+	width: 100%;
+	height: 100%;
+	padding: calc(2.8rem + 1.4rem + 4px + 1rem) 1rem 0;
 }

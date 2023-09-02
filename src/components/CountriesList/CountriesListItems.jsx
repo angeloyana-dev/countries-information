@@ -1,6 +1,10 @@
-export default function CountriesListItems({ countriesList }) {
+export default function CountriesListItems({ countriesList, searchInputValue }) {
 	const countriesItems = countriesList.map((country) => {
-		return (<div key={country.name.official}>
+		return (<div style={{ display:
+			country.name.common.toLowerCase().includes(searchInputValue) ||
+			country.name.official.toLowerCase().includes(searchInputValue) ?
+			'' : 'none'
+		}} key={country.name.official}>
 			<div className="img-holder">
 				<img src={country.flags.png} alt={country.flags.alt} />
 			</div>
@@ -11,5 +15,7 @@ export default function CountriesListItems({ countriesList }) {
 		</div>)
 	})
 	
-	return <>{countriesItems}</>
+	return (<>
+		{countriesItems}
+	</>)
 }
