@@ -82,3 +82,97 @@ body {
 	height: 100%;
 	padding: calc(2.8rem + 1.4rem + 4px + 1rem) 1rem 0;
 }
+
+#root section.country-info {
+	width: 100%;
+	padding: 1.7rem;
+}
+
+#root section.country-info .wrapper {
+	width: 97%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.7rem;
+}
+
+#root section.country-info .wrapper > * {
+	width: 100%;
+}
+
+#root section.country-info .wrapper .img-holder {
+	display: flex;
+	justify-content: center;
+	gap: 0.5rem;
+}
+
+#root section.country-info .wrapper .img-holder img {
+	height: 6rem;
+	box-shadow: 0 0 0.4rem #00000020;
+}
+
+#root section.country-info .wrapper .heading {
+	display: grid;
+	gap: 0.2rem;
+}
+
+#root section.country-info .wrapper .heading h3 {
+	font-family: Serif;
+	font-size: 1.6rem;
+	font-weight: 500;
+	text-align: center;
+}
+
+#root section.country-info .wrapper .heading h4 {
+	font-size: 1rem;
+	font-weight: 400;
+	font-style: italic;
+	text-align: center;
+	color: #3f3f46;
+}
+
+#root section.country-info .wrapper table {
+	border-collapse: collapse;
+}
+
+#root section.country-info .wrapper table tr:nth-child(odd) {
+	background: #fafafa;
+}
+
+#root section.country-info .wrapper table tr:hover {
+	background: #f4f4f5;
+}
+
+#root section.country-info .wrapper table td {
+	padding: 0.5rem 0.6rem;
+	font-size: 0.95rem;
+	border: 1px solid #e4e4e7;
+}
+
+#root section.country-info .wrapper .btn-holder {
+	display: grid;
+	grid-template-columns: repeat(5, auto);
+	gap: 0.5rem;
+}
+
+#root section.country-info .wrapper .btn-holder > * {
+	padding: 0.7rem;
+	font-size: 1rem;
+}
+
+#root section.country-info .wrapper .btn-holder a {
+	grid-column: span 1;
+	background: #059668;
+	color: #fff;
+	text-decoration: none;
+	display: grid;
+	place-items: center;
+}
+
+#root section.country-info .wrapper .btn-holder button {
+	grid-column: span 4;
+	border: none;
+	background: #18181b;
+	color: #fff;
+}
