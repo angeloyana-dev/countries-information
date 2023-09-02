@@ -1,0 +1,47 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Sans-Serif;
+	color: #18181b;
+}
+
+#root {
+	width: 100%;
+	height: 100vh;
+}
+
+#root section.countries-list {
+	width: 100%;
+	height: 100%;
+}
+
+#root section.countries-list > div {
+	padding: 0.7rem 1rem;
+	border-bottom: 1px solid #e4e4e7;
+	display: flex;
+	align-items: center;
+	gap: 0.65rem;
+}
+
+#root section.countries-list > div:hover {
+	background: #fafafa;
+}
+
+#root section.countries-list > div .img-holder {
+	display: grid;
+}
+
+#root section.countries-list > div .img-holder img {
+	width: 5rem;
+	height: 2.85rem;
+	box-shadow: 0 0 0.5rem #00000020;
+	transition: 150ms;
+}
+
+#root section.countries-list > div .img-holder:hover > img {
+	transform: scale(1.15);
+}
