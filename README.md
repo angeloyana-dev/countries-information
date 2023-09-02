@@ -6,4 +6,4 @@ A simple website that shows general informations about different countries.
 
 ---
 
-[Visit here](https://angeloyana-dev.github.io/countries-information/)
+[Visit here]()

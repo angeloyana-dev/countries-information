@@ -1,94 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-		<link rel="stylesheet" href="src/styles.css">
-		<script defer src="src/script.js"></script>
-		<title>Countries</title>
-	</head>
-	<body>
-		
-		<!-- Searching section -->
-		<section class="search-input-container">
-			<input type="text" id="search-input" placeholder="Search">
-			<button id="search-button" class="fa-solid fa-magnifying-glass"></button>
-		</section>
-		<main>
-			
-			<!-- Countries list section -->
-			<section id="countries-list" class="countries-list-container"></section>
-			<section id="no-result-page" class="no-result-container">
-				No result found.
-			</section>
-			
-			<!-- Country infos page -->
-			<section id="country-infos" class="country-infos-container">
-				<div>
-					<div id="images">
-						<img>
-						<img>
-					</div>
-					<div>
-						<h3 id="common-name">N/A</h3>
-						<h4 id="native-name">N/A</h4>
-					</div>
-					<div>
-						<table>
-							<tr>
-								<td>Official</td>
-								<td id="official-name">N/A</td>
-							</tr>
-							<tr>
-								<td>Population</td>
-								<td id="population">N/A</td>
-							</tr>
-							<tr>
-								<td>Area</td>
-								<td id="area">N/A</td>
-							</tr>
-							<tr>
-								<td>Capital</td>
-								<td id="capital">N/A</td>
-							</tr>
-							<tr>
-								<td>Region</td>
-								<td id="region">N/A</td>
-							</tr>
-							<tr>
-								<td>Subregion</td>
-								<td id="subregion">N/A</td>
-							</tr>
-							<tr>
-								<td>Official languages</td>
-								<td id="official-languages">N/A</td>
-							</tr>
-							<tr>
-								<td>Timezone</td>
-								<td id="timezone">N/A</td>
-							</tr>
-							<tr>
-								<td>Currency</td>
-								<td id="currency">N/A</td>
-							</tr>
-							<tr>
-								<td>Calling code</td>
-								<td id="calling-code">N/A</td>
-							</tr>
-							<tr>
-								<td>Internet top-level domain</td>
-								<td id="country-domain">N/A</td>
-							</tr>
-						</table>
-					</div>
-					<div>
-						<a id="maps" class="fa-solid fa-location"></a>
-						<button onclick="closeCountryInfos()">Back</button>
-					</div> 
-				</div>
-			</section>
-		</main>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countries Info</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
